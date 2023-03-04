@@ -1,0 +1,18 @@
+{
+  "name": "swasthin",
+  "version": "1.0.0",
+  "description": "Admin Panel",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Connivia Tech",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.29.0"
+  }
+}
