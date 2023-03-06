@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="breadcrumb-main">
-              <h4 class="text-capitalize breadcrumb-title">user profile</h4>
+              <h4 class="text-capitalize breadcrumb-title">instructor profile</h4>
               <div class="breadcrumb-action justify-content-center flex-wrap">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
@@ -15,7 +15,7 @@
                       <a href="#"><i class="uil uil-estate"></i>Home</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
-                      user profile
+                      instructor profile
                     </li>
                   </ol>
                 </nav>
@@ -28,10 +28,10 @@
                 <div class="card-body text-center pt-sm-30 pb-sm-0 px-25 pb-0">
                   <div class="account-profile">
                     <div class="ap-img w-100 d-flex justify-content-center">
-                      <img class="ap-img__main rounded-circle p-2 mb-3 wh-120 d-flex bg-opacity-primary" src="<%= userData.profile ? userData.profile : '/img/user.png' %>" alt="profile">
+                      <img class="ap-img__main rounded-circle p-2 mb-3 wh-120 d-flex bg-opacity-primary" src="<%= instructorData.profile ? instructorData.profile : '/img/user.png' %>" alt="profile">
                     </div>
                     <div class="ap-nameAddress pb-3 pt-1">
-                      <h5 class="ap-nameAddress__title"><%= userData.name %></h5>
+                      <h5 class="ap-nameAddress__title"><%= instructorData.name %></h5>
                     </div>
                   </div>
                 </div>
@@ -45,10 +45,10 @@
                   <div class="card-body pt-md-1 pt-0">
                     <div class="user-content-info">
                       <p class="user-content-info__item">
-                        <i style="font-size: 20px;"  class="uil uil-envelope svg mx-2"></i>  <%= userData.email %>
+                        <i style="font-size: 20px;"  class="uil uil-envelope svg mx-2"></i>  <%= instructorData.email %>
                       </p>
                       <p class="user-content-info__item">
-                        <i style="font-size: 20px;" class="uil uil-phone mx-2"></i><%= userData.country_code %> <%= userData.mobile %>
+                        <i style="font-size: 20px;" class="uil uil-phone mx-2"></i><%= instructorData.country_code %> <%= instructorData.mobile %>
                       </p>
                     </div>
                   </div>
@@ -62,13 +62,13 @@
                   <div class="card-body pt-md-1 pt-0">
                     <div class="user-content-info">
                       <p class="user-content-info__item">
-                        <i  style="font-size: 20px;"  class="uil uil-<%= userData.gender === 'Male' ? 'mars' : 'venus'%>  mx-2"></i><%= userData.gender %>
+                        <i  style="font-size: 20px;"  class="uil uil-<%= instructorData.gender === 'Male' ? 'mars' : 'venus'%>  mx-2"></i><%= instructorData.gender %>
                       </p>
                       <p class="user-content-info__item">
-                        <i style="font-size: 20px;" class="uil uil-18-plus  mx-2"></i><%= userData.age %>
+                        <i style="font-size: 20px;" class="uil uil-18-plus  mx-2"></i><%= instructorData.age %>
                       </p>
                       <p class="user-content-info__item">
-                        <i style="font-size: 20px;" class="uil uil-schedule  mx-2"></i><%= userData.dob %>
+                        <i style="font-size: 20px;" class="uil uil-schedule  mx-2"></i><%= instructorData.dob %>
                       </p>
                     </div>
                   </div>
@@ -82,19 +82,19 @@
                   <div class="card-body pt-md-1 pt-0">
                     <div class="user-content-info">
                       <p class="user-content-info__item">
-                        <i  style="font-size: 20px;"  class="uil uil-ruler mx-2"></i><%= userData.height %>
+                        <i  style="font-size: 20px;"  class="uil uil-ruler mx-2"></i><%= instructorData.height %>
                       </p>
                       <p class="user-content-info__item">
-                        <i style="font-size: 20px;" class="uil uil-weight mx-2"></i><%= userData.weight %>
+                        <i style="font-size: 20px;" class="uil uil-weight mx-2"></i><%= instructorData.weight %>
                       </p>
                       <p class="user-content-info__item">
-                        <i style="font-size: 20px;" class="uil uil-swimmer mx-2"></i><%= userData.physical_activity_level %>
+                        <i style="font-size: 20px;" class="uil uil-swimmer mx-2"></i><%= instructorData.physical_activity_level %>
                       </p>
                       <p class="user-content-info__item">
-                        <i style="font-size: 20px;" class="uil uil-medical-square mx-2"></i><%= userData.medical_conditions %>
+                        <i style="font-size: 20px;" class="uil uil-medical-square mx-2"></i><%= instructorData.medical_conditions %>
                       </p>
                       <p class="user-content-info__item">
-                        <i style="font-size: 20px;" class="uil uil-crockery mx-2"></i><%= userData.diet_preferences %>
+                        <i style="font-size: 20px;" class="uil uil-crockery mx-2"></i><%= instructorData.diet_preferences %>
                       </p>
                     </div>
                   </div>

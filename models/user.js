@@ -42,7 +42,10 @@ const User = sequelize.define('user', {
   image:DataTypes.STRING,
   status : DataTypes.TINYINT,
   ban : DataTypes.INTEGER,
-  deleted_at : "TIMESTAMP",
+  deletedAt: {
+    field: 'deleted_at',
+    type: DataTypes.DATE
+},
   createdAt: {
     field: 'created_at',
     type: DataTypes.DATE,
@@ -51,6 +54,6 @@ updatedAt: {
     field: 'updated_at',
     type: DataTypes.DATE,
 }
-});
+} , {paranoid:true , timestamps:true});
 
 module.exports = User;

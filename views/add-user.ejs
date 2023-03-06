@@ -1,0 +1,199 @@
+<%- include("./includes/head.ejs") %>
+<%- include("./includes/header.ejs") %>
+<%- include("./includes/sidebar.ejs") %>
+<div class="contents">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb-main">
+          <h4 class="text-capitalize breadcrumb-title">Form Layouts</h4>
+          <div class="breadcrumb-action justify-content-center flex-wrap">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#"><i class="uil uil-estate"></i>Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  form layouts
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card card-Vertical card-default card-md mb-4">
+          <div class="card-header">
+            <h6>Multiple Column</h6>
+          </div>
+          <div class="card-body py-md-30">
+            <form action="/add-user" method="POST">
+              <div class="row">
+                <!-- <div class="card card-default card-md mb-4"> -->
+                  <div class="card-body pb-md-40 pt-md-30">
+                    <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Profile Picture</label>
+                    <div class="custom-file">
+                      <input name="image" class="form-control custom-file-input" type="file" id="customFile" >
+                    </div>
+                  </div>
+                <!-- </div> -->
+                <div class="col-md-6 mb-25">
+                  <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control ih-medium ip-gray radius-xs b-light px-15"
+                    placeholder="Full Name"
+                  />
+                </div>
+                <div class="col-md-6 mb-25">
+                  <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control ih-medium ip-gray radius-xs b-light px-15"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="col-md-6 mb-25">
+                  <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Country Code</label>
+                  <input
+                    type="text"
+                    name="country_code"
+                    class="form-control ih-medium ip-gray radius-xs b-light px-15"
+                    placeholder="Country Code"
+                  />
+                </div>
+                <div class="col-md-6 mb-25">
+                  <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Phone Number</label>
+                  <input
+                    type="number"
+                    name="mobile"
+                    class="form-control ih-medium ip-gray radius-xs b-light px-15"
+                    placeholder="Phone Number"
+                  />
+                </div>
+                <div class="col-md-6 mb-25">
+                  <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Gender</label>
+                    <select class="form-control px-15 " id="exampleFormControlSelect1" name="gender">
+                    <option >Select</option>
+                    <option value="male">Male</option>
+                    <option  value="female">Female</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-25">
+                  <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Age</label>
+                  <input
+                    type="number"
+                    name="age"
+                    class="form-control ih-medium ip-gray radius-xs b-light px-15"
+                    placeholder="Age"
+                  />
+                </div>
+                  <div class="col-md-6 mb-25">
+                    <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Date Of Birth</label>
+                    <div class="position-relative">
+                      <input
+                        type="text"
+                        name="dob"
+                        class="form-control ih-medium ip-light radius-xs b-light px-15"
+                        id="datepicker8"
+                        placeholder="Date Of Birth"
+                      />
+                    </div>
+                  </div>
+                <div class="col-md-6 mb-25">
+                  <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Height</label>
+                  <input
+                    type="number"
+                    name="height"
+                    class="form-control ih-medium ip-gray radius-xs b-light px-15"
+                    placeholder="Height"
+                  />
+                </div>
+                <div class="col-md-6 mb-25">
+                  <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Weight</label>
+                  <input
+                    type="number"
+                    name="weight"
+                    class="form-control ih-medium ip-gray radius-xs b-light px-15"
+                    placeholder="Weight"
+                  />
+                </div>
+                <div class="col-md-6 mb-25">
+                  <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Physical Activity Level</label>
+                    <select class="form-control px-15 " id="exampleFormControlSelect1" name="physical_activity_level">
+                    <option>Select</option>
+                    <option value="vigorous">Vigorous</option>
+                    <option value="modrate">Moderate</option>
+                    <option value="gentle">Gentle</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-25">
+                  <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Medical Conditions</label>
+                  <input
+                    type="text"
+                    name="medical_conditions"
+                    class="form-control ih-medium ip-gray radius-xs b-light px-15"
+                    placeholder="Medical Conditions"
+                  />
+                </div>
+                <div class="col-md-6 mb-25">
+                  <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Allergies</label>
+                  <input
+                    type="text"
+                    name="allergies"
+                    class="form-control ih-medium ip-gray radius-xs b-light px-15"
+                    placeholder="Allergies"
+                  />
+                </div>
+                <div class="col-md-6 mb-25">
+                  <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Diet Preferences</label>
+                  <input
+                    type="text"
+                    name="diet_preferences"
+                    class="form-control ih-medium ip-gray radius-xs b-light px-15"
+                    placeholder="Diet Preferences"
+                  />
+                  </div>
+                  <div class="col-md-6 mb-25">
+                    <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">password</label>
+                    <div class="position-relative">
+                      <input
+                        id="password-field"
+                        type="password"
+                        class="form-control  ih-medium ip-gray radius-xs b-light px-15"
+                        name="password"
+                        placeholder="Password"
+                      />
+                      <div
+                        class="uil uil-eye-slash text-lighten fs-15 field-icon toggle-password2"
+                      ></div>
+                    </div>
+                    </div>
+                <div class="col-md-6">
+                  <div class="layout-button mt-0">
+                    <button
+                      type="button"
+                      class="btn btn-default btn-squared btn-light px-20"
+                    >
+                      cancel
+                    </button>
+                    <button
+                      class="btn btn-primary btn-default btn-squared px-30"
+                    >
+                      save
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("./includes/footer.ejs") %>

@@ -1,0 +1,98 @@
+<%- include("./includes/head.ejs") %>
+<%- include("./includes/header.ejs") %>
+<%- include("./includes/sidebar.ejs") %>
+<div class="contents">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb-main">
+          <h4 class="text-capitalize breadcrumb-title">gallery</h4>
+          <div class="action-btn">
+            <a
+              href="/add-banner"
+              class="btn px-15 btn-primary"
+            >
+            <i class="uil uil-plus"></i>Add Banner</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="gallery-filter mb-sm-50 mb-30">
+          <ul
+            class="simplefilter w-100 ap-tab-main px-sm-25 px-15 bg-white d-flex flex-wrap align-items-center radius-xl"
+          >
+            <li class="fltr-controls nav-link active" data-filter="all">All</li>
+            <li class="fltr-controls nav-link" data-filter="1">Web Design</li>
+            <li class="fltr-controls nav-link" data-filter="2">UI Design</li>
+            <li class="fltr-controls nav-link" data-filter="3">
+              Wireframe Kits
+            </li>
+            <li class="fltr-controls nav-link" data-filter="4">Presentation</li>
+          </ul>
+          <div class="push-down push-down--style">
+            <div
+              class="filtr-container"
+              style="
+                padding: 25px;
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                height: 445px;
+              "
+            >
+            <% for (let banner of banners) { %>
+              <div
+                class="filtr-item filtr-item--style"
+                data-category="1"
+                data-sort="Busy streets"
+                style="
+                  opacity: 1;
+                  transform: scale(1) translate3d(0px, 0px, 0px);
+                  backface-visibility: hidden;
+                  perspective: 1000px;
+                  transform-style: preserve-3d;
+                  position: absolute;
+                  width: 373.73.px;
+                  transition: all 0.5s ease-out 0ms, width 1ms ease 0s;
+                "
+              >
+                <div class="card">
+                  <div class="gc">
+                    <div class="gc__img">
+                      <img
+                        src="/<%= banner.image %>"
+                        alt="img"
+                        class="w-100 radius-xl"
+                      />
+                    </div>
+                    <div class="card-body px-25 py-20">
+                      <div class="btn btn-default btn-squared <%= banner.status==="enable" ? "color-success btn-outline-success" : "color-danger btn-outline-danger" %> d-inline p-10 m-2">
+                        <%= banner.status %>
+                      </div>
+                      <div class="btn btn-default btn-squared  btn-outline-info d-inline p-10 m-2">
+                        <a href="" class="color-info">
+                          <i class="uil uil-edit"></i>
+                        </a>
+                      </div>
+                      <div class="btn btn-default btn-squared color-danger btn-outline-danger d-inline p-10 m-2">
+                        <a href="" class="color-danger">
+                          <i class="uil uil-trash-alt"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("./includes/footer.ejs") %>
