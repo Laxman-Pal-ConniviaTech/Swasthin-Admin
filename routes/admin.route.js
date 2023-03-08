@@ -1,39 +1,43 @@
 const express = require("express");
 const router = express.Router();
 const adminController = require("../controller/admin.controller")
+const authMiddleware = require("../middleware/auth.middleware")
 
-router.get("/", adminController.getDashboard);
+router.get("/", authMiddleware.isLogin ,  adminController.getDashboard);
 
-router.get("/login", (req, res) => {
-  res.render("login")
-});
+router.get("/users_list",authMiddleware.isLogin ,adminController.getUserList );
 
+router.get("/user_details/:id",authMiddleware.isLogin , adminController.getUserDetails );
 
-router.get("/users_list",adminController.getUserList );
+router.get("/edit-user/:id",authMiddleware.isLogin , adminController.getEditUser );
 
-router.get("/user_details/:id", adminController.getUserDetails );
+router.post("/edit-user", authMiddleware.isLogin ,adminController.updateUser );
 
-router.get("/edit-user/:id", adminController.getEditUser );
+router.get("/remove-user/:id", authMiddleware.isLogin ,adminController.removeUser );
 
-router.post("/edit-user", adminController.updateUser );
+router.get("/add-user" ,authMiddleware.isLogin , adminController.getAddUser);
 
-router.get("/remove-user/:id", adminController.removeUser );
+router.post("/add-user" , authMiddleware.isLogin ,adminController.postAddUser);
 
-router.get("/add-user" , adminController.getAddUser);
+router.get("/instructors_list", authMiddleware.isLogin ,adminController.getInstructorList);
 
-router.post("/add-user" , adminController.postAddUser);
+router.get("/instructor_details/:id", authMiddleware.isLogin ,adminController.getInstructorDetails );
 
-router.get("/instructors_list", adminController.getInstructorList);
+router.get("/add-instructor" , authMiddleware.isLogin ,adminController.getAddInstructor);
 
-router.get("/instructor_details/:id", adminController.getInstructorDetails );
+router.get("/banners", authMiddleware.isLogin ,adminController.getBanners);
 
-router.get("/add-instructor" , adminController.getAddInstructor);
-
-router.get("/banners", adminController.getBanners);
-
-router.get("/add-banner", adminController.getAddBanner);
+router.get("/add-banner", authMiddleware.isLogin ,adminController.getAddBanner);
 
 router.post("/add-banner", adminController.postAddBanner);
+
+router.get("/edit-banner/:id", authMiddleware.isLogin ,adminController.getUpdateBanner);
+
+router.post("/edit-banner", authMiddleware.isLogin ,adminController. updateBanner);
+
+router.get("/remove-banner/:id", authMiddleware.isLogin ,adminController.removeBanner );
+
+
 
 
 module.exports = router;

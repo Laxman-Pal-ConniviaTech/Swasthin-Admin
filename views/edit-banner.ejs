@@ -1,0 +1,72 @@
+<%- include("./includes/head.ejs") %>
+<%- include("./includes/header.ejs") %>
+<%- include("./includes/sidebar.ejs") %>
+<div class="contents">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb-main">
+          <h4 class="text-capitalize breadcrumb-title">Form Layouts</h4>
+          <div class="breadcrumb-action justify-content-center flex-wrap">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#"><i class="uil uil-estate"></i>Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  form layouts
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card card-Vertical card-default card-md mb-4">
+          <div class="card-header">
+            <h6>Multiple Column</h6>
+          </div>
+          <div class="card-body py-md-30">
+            <form action="/edit-banner" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="id" value="<%= banner.id %>">
+              <div class="row">
+                <div class="card-body pb-md-40 pt-md-30">
+                    <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Profile Picture</label>
+                    <div class="custom-file">
+                      <input name="image" class="form-control custom-file-input" type="file" required id="customFile"  >
+                    </div>
+                  </div>
+                  <div class=" mb-25">
+                    <label for="formGroupExampleInput" class="color-dark fs-14 fw-500 align-center mb-10">Status</label>
+                      <select class="form-control px-15 " id="exampleFormControlSelect1" name="status">
+                      <option >Select</option>
+                      <option <%= banner.status==="enable" && "selected" %> value="enable">Enable</option>
+                      <option <%= banner.status==="disable" && "selected" %>  value="disable">Disable</option>
+                      </select>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="layout-button mt-0">
+                      <a href="/banners"
+                        class="btn btn-default btn-squared btn-light px-20"
+                      >
+                        cancel
+                    </a>
+                      <button
+                      type="submit"
+                        class="btn btn-primary btn-default btn-squared px-30"
+                      >
+                        save
+                      </button>
+                    </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("./includes/footer.ejs") %>

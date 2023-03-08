@@ -53,20 +53,10 @@
                 <thead>
                   <tr class="userDatatable-header">
                     <th>
-                      <div class="d-flex align-items-center">
-                        <div class="custom-checkbox check-all">
-                          <input
-                            class="checkbox"
-                            type="checkbox"
-                            id="check-44"
-                          />
-                          <label for="check-44">
-                            <span class="checkbox-text userDatatable-title"
-                              >Name</span
-                            >
-                          </label>
-                        </div>
-                      </div>
+                      <span class="userDatatable-title">ID</span>
+                    </th>
+                    <th>
+                      <span class="userDatatable-title">name</span>
                     </th>
                     <th>
                       <span class="userDatatable-title">emaill</span>
@@ -96,29 +86,12 @@
                 <tbody>
                     <% for (let user of users) { %>
                   <tr>
+                    <td> #<%= user.id %> </td>
                     <td>
                       <div class="d-flex">
-                        <div
+                        <div style="width: 50px; height: 50px; border-radius: 50%;"
                           class="userDatatable__imgWrapper d-flex align-items-center"
-                        >
-                          <div class="checkbox-group-wrapper">
-                            <div class="checkbox-group d-flex">
-                              <div
-                                class="checkbox-theme-default custom-checkbox checkbox-group__single d-flex"
-                              >
-                                <input
-                                  class="checkbox"
-                                  type="checkbox"
-                                  id="check-grp-content12"
-                                />
-                                <label for="check-grp-content12"></label>
-                              </div>
-                            </div>
-                          </div>
-                          <a
-                            href="#"
-                            class="profile-image rounded-circle d-block m-0 wh-38"
-                          > <img style="padding: 2px; width: 35px; border-radius:50%; border: 0.5px solid #000;" src="<%= user.image ? user.image : 'img/user.png' %> " alt=""> </a>
+                        ><img style="padding: 1px; width: 100%; border-radius: 50%;" src="<%= user.image ? user.image : 'img/user.png' %> " alt="">
                         </div>
                         <div class="userDatatable-inline-title">
                           <a href="#" class="text-dark fw-500">

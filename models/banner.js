@@ -16,7 +16,10 @@ const Banner = sequelize.define("banners", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  deleted_at: DataTypes.DATE,
+  deletedAt: {
+    field: 'deleted_at',
+    type: DataTypes.DATE
+},
   createdAt: {
     field: "created_at",
     type: DataTypes.DATE,
@@ -25,6 +28,6 @@ const Banner = sequelize.define("banners", {
     field: "updated_at",
     type: DataTypes.DATE,
   },
-});
+}, {paranoid:true , timestamps:true});
 
 module.exports = Banner;
